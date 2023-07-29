@@ -54,7 +54,7 @@ const CalculatorContent = () => {
           />
         </div>
       </div>
-      <div className="mt-14 flex flex-col md:grid md:grid-cols-12 gap-6 lg:gap-14 overflow-hidden">
+      <div className="mt-14 flex flex-col md:grid md:grid-cols-12 gap-6 lg:gap-14">
         <EmployeeCalculatorBreakdowns breakdowns={results?.breakdowns} />
       </div>
     </div>
