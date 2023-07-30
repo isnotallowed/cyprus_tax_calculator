@@ -15,6 +15,8 @@ export const metadata: Metadata = {
     "income",
     "rates",
     "salary",
+    "Cyprus Tax Calculator",
+    "Tax Optimization Tool",
   ],
 };
 

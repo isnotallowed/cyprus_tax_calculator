@@ -4,4 +4,8 @@
         <loc>https://cyprustaxcalculator.cy/</loc>
         <priority>1.0</priority>
     </url>
+    <url>
+        <loc>https://cyprustaxcalculator.cy/vat-calculator</loc>
+        <priority>0.7</priority>
+    </url>
 </urlset>

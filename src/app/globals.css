@@ -2,3 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+.p-menubar {
+    background-color: unset;
+    border: unset;
+    color: #fff;
+}
+
+.p-menubar-root-list {
+    @apply p-4;
+}
+
+.p-menuitem {
+    @apply px-4 py-2 w-max;
+}
+
+.p-menubar-button {
+    color: white !important;
+}

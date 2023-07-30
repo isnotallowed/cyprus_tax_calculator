@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { calculateResults, CalculationResults } from "@/services/taxCalculator";
+import { CalculationResults, calculateResults } from "@/services/taxCalculator";
 import EmployeeCalculatorBreakdowns from "@/app/components/EmployeeCalculator/EmployeeCalculatorBreakdowns";
 import EmployeeCalculatorForm from "@/app/components/EmployeeCalculator/EmployeeCalculatorForm";
 import EmployeeCalculatorResult from "@/app/components/EmployeeCalculator/EmployeeCalculatorResult";
@@ -32,16 +32,16 @@ const CalculatorContent = () => {
 
   return (
     <div>
-      <div className="flex flex-col md:grid md:grid-cols-12 gap-6 lg:gap-14">
+      <div className="flex flex-col md:grid md:grid-cols-12 gap-6 lg:gap-12">
         <EmployeeCalculatorForm
           onSalaryChange={setSalary}
           onSetPeriod={setPeriod}
           period={period}
           onSetHasThirteenSalary={setHasThirteenSalary}
           hasThirteenSalary={hasThirteenSalary}
-          className="p-4 md:col-span-3 bg-white rounded-2xl shadow-xl"
+          className="p-4 md:col-span-5 xl:col-span-3 bg-white rounded-2xl shadow-xl"
         />
-        <div className="p-4 bg-white md:col-span-9 rounded-2xl w-full flex flex-col md:flex-row justify-between gap-8 lg:gap-20 shadow-xl">
+        <div className="p-4 bg-white md:col-span-7 xl:col-span-9 rounded-2xl w-full flex flex-col md:flex-row justify-between gap-8 lg:gap-20 shadow-xl">
           <EmployeeCalculatorResult
             title={"Annual"}
             results={results?.annual}
@@ -54,7 +54,7 @@ const CalculatorContent = () => {
           />
         </div>
       </div>
-      <div className="mt-14 flex flex-col md:grid md:grid-cols-12 gap-6 lg:gap-14">
+      <div className="mt-14 flex flex-col md:grid md:grid-cols-12 gap-6 lg:gap-12">
         <EmployeeCalculatorBreakdowns breakdowns={results?.breakdowns} />
       </div>
     </div>
