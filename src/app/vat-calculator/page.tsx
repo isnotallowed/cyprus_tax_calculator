@@ -3,7 +3,7 @@ import VatCalculator from "@/app/components/VatCalculator";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Cyprus Tax Calculator | Easily Estimate Your Value Added Tax",
+  title: "Cyprus Tax Calculator | Easily Estimate Your Value Added Tax (VAT)",
   description:
     "Simplify your VAT calculations in Cyprus with our efficient VAT calculator. Get precise estimates for each category, optimize your finances, and make informed decisions. Discover the convenience of our Cyprus Tax Calculator and VAT Calculator now!",
   keywords: [
@@ -24,7 +24,7 @@ const VatRateCalculator = () => {
       <VatCalculator />
       <div className="p-4 rounded-2xl bg-white mt-14 flex flex-col gap-4 shadow-xl indent-4 text-justify">
         <h1 className="text-center text-2xl indent-0 font-bold">
-          Effortless VAT Calculations with Our Cyprus VAT Calculator
+          Effortless VAT Calculations with Our Cyprus Tax Calculator
         </h1>
         <p>
           Empower yourself with seamless VAT calculations in Cyprus using our
