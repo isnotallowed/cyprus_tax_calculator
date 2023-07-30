@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 .p-menubar {
-    background-color: unset;
-    border: unset;
-    color: #fff;
+    background-color: unset !important;
+    border: unset !important;
+    color: #fff !important;
 }
 
 .p-menubar-root-list {
