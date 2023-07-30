@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     "cyprus",
     "tax",
     "calculator",
-    "vat-calculator",
+    "vat calculator",
     "rates",
     "Cyprus Tax Calculator",
     "Tax Optimization Tool",
