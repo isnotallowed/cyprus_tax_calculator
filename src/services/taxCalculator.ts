@@ -34,7 +34,8 @@ const gesiRate = 2.65;
 const socialInsuranceRate = 8.3;
 const socialInsuranceCap = 54396.0;
 
-export const formatMoney = (n: number): string => {
+export const formatMoney = (n: string | number): string => {
+  n = Number(n);
   if (n === Number.MAX_SAFE_INTEGER) return "-";
 
   const c = 2;
