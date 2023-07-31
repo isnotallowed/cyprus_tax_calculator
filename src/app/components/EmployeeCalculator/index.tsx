@@ -19,14 +19,7 @@ const CalculatorContent = () => {
       return;
     }
     setResults(() => {
-      return calculateResults(
-        period === "monthly"
-          ? hasThirteenSalary
-            ? salary * 13
-            : salary * 12
-          : salary,
-        hasThirteenSalary,
-      );
+      return calculateResults(salary, hasThirteenSalary, period === "annual");
     });
   }, [hasThirteenSalary, period, salary]);
 

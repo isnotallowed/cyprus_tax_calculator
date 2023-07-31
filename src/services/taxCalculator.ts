@@ -34,24 +34,26 @@ const gesiRate = 2.65;
 const socialInsuranceRate = 8.3;
 const socialInsuranceCap = 54396.0;
 
-export const formatMoney = (n: any): string => {
+export const formatMoney = (n: number): string => {
   if (n === Number.MAX_SAFE_INTEGER) return "-";
+
   const c = 2;
   const d = ".";
   const t = ",";
   const s = n < 0 ? "-" : "";
-  const i: any = String(
-    parseInt((n = Math.abs(Number(n) || 0).toFixed(c)), 10),
-  );
+  const absoluteN = Math.abs(n);
+
+  const i: string = String(parseInt(absoluteN.toFixed(c), 10));
   const l = i.length;
   const j = l > 3 ? l % 3 : 0;
+
   return (
     s +
     (j ? i.substr(0, j) + t : "") +
     i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) +
     (c
       ? d +
-        Math.abs(n - i)
+        Math.abs(absoluteN - parseFloat(i))
           .toFixed(c)
           .slice(2)
       : "")
@@ -83,8 +85,16 @@ const calculateTaxBreakdown = (
 export const calculateResults = (
   salary: number,
   hasThirteenth: boolean,
+  isAnnual: boolean,
 ): CalculationResults => {
-  const yearlyGross = parseFloat(salary.toString());
+  // Adjust salary based on whether it's annual or monthly
+  const adjustedSalary = isAnnual
+    ? salary
+    : hasThirteenth
+    ? salary * 13
+    : salary * 12;
+
+  const yearlyGross = parseFloat(adjustedSalary.toString());
 
   // calculate gesi
   const gesi = (yearlyGross * gesiRate) / 100;
@@ -96,8 +106,8 @@ export const calculateResults = (
   }
   const social = (insurableAmount * socialInsuranceRate) / 100;
 
-  let untaxables = social + gesi;
-  let totalTaxableAmount = yearlyGross - untaxables;
+  const untaxables = social + gesi;
+  const totalTaxableAmount = yearlyGross - untaxables;
 
   const { tax, breakdown } = calculateTaxBreakdown(
     totalTaxableAmount,
@@ -108,18 +118,18 @@ export const calculateResults = (
 
   return {
     annual: {
-      gross: formatMoney(salary),
+      gross: formatMoney(adjustedSalary),
       tax: formatMoney(tax),
       social: formatMoney(social),
       gesi: formatMoney(gesi),
-      net: formatMoney(salary - tax - social - gesi),
+      net: formatMoney(adjustedSalary - tax - social - gesi),
     },
     monthly: {
-      gross: formatMoney(salary / months),
+      gross: formatMoney(adjustedSalary / months),
       tax: formatMoney(tax / months),
       social: formatMoney(social / months),
       gesi: formatMoney(gesi / months),
-      net: formatMoney((salary - tax - social - gesi) / months),
+      net: formatMoney((adjustedSalary - tax - social - gesi) / months),
     },
     breakdowns: breakdown,
   };

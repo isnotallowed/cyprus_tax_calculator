@@ -18,3 +18,4 @@ pnpm dev
   - [ ] 50%
   - [ ] 20%
 - [ ] Add metrics for events
+- [ ] Feedback form
