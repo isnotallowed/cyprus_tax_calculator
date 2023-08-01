@@ -14,10 +14,9 @@ type IncomeCalculatorWithSalaryProps = {
   };
 };
 
-export async function generateMetadata(
-  { params }: IncomeCalculatorWithSalaryProps,
-  parent?: ResolvingMetadata,
-): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: IncomeCalculatorWithSalaryProps): Promise<Metadata> {
   return {
     title: `Cyprus Tax Calculator | Taxes With ${params.salary} Euro Annual Salary`,
     description: `How much should I pay with ${params.salary} annual salary on Cyprus? Use our Cyprus Tax Calculator for estimating your taxes!`,
