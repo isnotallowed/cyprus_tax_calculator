@@ -19,7 +19,7 @@ const VatCalculatorForm = ({ className }: VatCalculatorFormProps) => {
   );
   const [selectedVatRate, setSelectedVatRate] = useState<number>(
     VAT_RATES[2].value,
-  ); // Default to 5% VAT rate
+  );
   const [priceIncludingVat, setPriceIncludingVat] = useState<number | null>(
     null,
   );

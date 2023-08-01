@@ -5,8 +5,14 @@ import EmployeeCalculatorBreakdowns from "@/app/components/EmployeeCalculator/Em
 import EmployeeCalculatorForm from "@/app/components/EmployeeCalculator/EmployeeCalculatorForm";
 import EmployeeCalculatorResult from "@/app/components/EmployeeCalculator/EmployeeCalculatorResult";
 
-const CalculatorContent = () => {
-  const [salary, setSalary] = useState<number | undefined | null>(null);
+interface CalculatorContentProps {
+  initialSalary?: number;
+}
+
+const CalculatorContent = ({ initialSalary }: CalculatorContentProps) => {
+  const [salary, setSalary] = useState<number | undefined | null>(
+    initialSalary,
+  );
   const [period, setPeriod] = useState<"annual" | "monthly">("annual");
   const [hasThirteenSalary, setHasThirteenSalary] = useState(false);
   const [results, setResults] = useState<CalculationResults | undefined>();
@@ -27,6 +33,7 @@ const CalculatorContent = () => {
     <div>
       <div className="flex flex-col md:grid md:grid-cols-12 gap-6 lg:gap-12">
         <EmployeeCalculatorForm
+          salary={salary}
           onSalaryChange={setSalary}
           onSetPeriod={setPeriod}
           period={period}

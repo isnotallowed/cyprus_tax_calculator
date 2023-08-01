@@ -8,6 +8,7 @@ const PERIODS = [
 ];
 
 interface EmployeeCalculatorFormProps {
+  salary?: number | null;
   onSalaryChange: (value: number | null) => void;
   onSetPeriod: (value: "annual" | "monthly") => void;
   period: "annual" | "monthly";
@@ -16,6 +17,7 @@ interface EmployeeCalculatorFormProps {
   className?: string;
 }
 const EmployeeCalculatorForm = ({
+  salary,
   onSalaryChange,
   onSetPeriod,
   period,
@@ -34,6 +36,7 @@ const EmployeeCalculatorForm = ({
             placeholder="€2,500"
             mode="currency"
             currency="EUR"
+            value={salary}
             onChange={(e) => onSalaryChange(e.value)}
           />
         </label>
