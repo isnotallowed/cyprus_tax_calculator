@@ -15,7 +15,11 @@ const CalculatorContent = ({ initialSalary }: CalculatorContentProps) => {
   );
   const [period, setPeriod] = useState<"annual" | "monthly">("annual");
   const [hasThirteenSalary, setHasThirteenSalary] = useState(false);
-  const [results, setResults] = useState<CalculationResults | undefined>();
+  const [results, setResults] = useState<CalculationResults | undefined>(() => {
+    return initialSalary
+      ? calculateResults(initialSalary, hasThirteenSalary, period === "annual")
+      : undefined;
+  });
 
   useEffect(() => {
     if (!salary) {
