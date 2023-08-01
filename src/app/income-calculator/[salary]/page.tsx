@@ -33,8 +33,8 @@ const IncomeCalculatorWithSalary = ({
       <EmployeeCalculatorContent initialSalary={salary} />
       <div className="p-4 rounded-2xl bg-white mt-14 flex flex-col gap-4 shadow-xl indent-4 text-justify">
         <h1 className="text-center text-2xl indent-0 font-bold">
-          You Can Calculate Your {salary} EUR Annual Salary with Our Cyprus
-          Employee Tax Calculator
+          You Can Calculate Taxes For Your {salary} EUR Annual Salary with Our
+          Cyprus Employee Tax Calculator
         </h1>
         <p>
           As an employee in Cyprus earning €{salary} annually, understanding and
