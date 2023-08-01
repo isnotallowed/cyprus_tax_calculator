@@ -37,7 +37,7 @@ const IncomeCalculatorWithSalary = ({
           Employee Tax Calculator
         </h1>
         <p>
-          As an employee in Cyprus earning €35,000 annually, understanding and
+          As an employee in Cyprus earning €{salary} annually, understanding and
           estimating your tax liabilities can be overwhelming. Our
           state-of-the-art Employee Tax Calculator is here to simplify the
           process and provide accurate results.
@@ -58,7 +58,7 @@ const IncomeCalculatorWithSalary = ({
           Replace manual calculations and tedious spreadsheets with our tax
           planning tool that offers smart strategies to optimize your tax
           savings effectively. Explore various deductions and credits available
-          on a €35,000 annual salary.
+          on a €{salary} annual salary.
         </p>
         <p>
           Your financial information is safe with us. Our top-notch security
