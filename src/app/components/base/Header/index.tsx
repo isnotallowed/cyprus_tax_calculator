@@ -1,12 +1,14 @@
 "use client";
 import { Menubar } from "primereact/menubar";
 import { useMessages, useTranslations, useLocale } from "next-intl";
-import { Link as CustomLink } from "@/navigation";
+import { Link as CustomLink, usePathname } from "@/navigation";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const Header = () => {
   const t = useTranslations();
   const locale = useLocale();
+  const pathname = usePathname();
 
   const LINKS = [
     {
@@ -59,7 +61,10 @@ const Header = () => {
                 </span>
                 <ul className="absolute z-30 hidden group-hover:block bg-white shadow-xl rounded-xl !px-4 !py-4 hover:block">
                   <li className="mb-3">
-                    <Link href="/el" className="text-black flex gap-2">
+                    <Link
+                      href={`/el${pathname}`}
+                      className="text-black flex gap-2"
+                    >
                       <img
                         src="/images/flags/el.png"
                         className="w-6"
@@ -69,7 +74,7 @@ const Header = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/" className="text-black flex gap-2">
+                    <Link href={pathname} className="text-black flex gap-2">
                       <img
                         src="/images/flags/en.png"
                         className="w-6"
