@@ -13,7 +13,7 @@ const EmployeeCalculatorBreakdowns = ({
 }: EmployeeCalculatorBreakdownsProps) => {
   return (
     <DataTable
-      className="bg-white md:col-span-9 rounded-2xl shadow-xl whitespace-nowrap overflow-hidden"
+      className="bg-white col-span-12 lg:col-span-9 rounded-2xl shadow-xl whitespace-nowrap overflow-hidden"
       scrollable
       tableClassName="overflow-auto"
       headerColumnGroup={
