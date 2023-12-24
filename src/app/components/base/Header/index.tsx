@@ -3,7 +3,6 @@ import { Menubar } from "primereact/menubar";
 import { useMessages, useTranslations, useLocale } from "next-intl";
 import { Link as CustomLink } from "@/navigation";
 import Link from "next/link";
-import Image from "next/image";
 
 const Header = () => {
   const t = useTranslations();
@@ -58,7 +57,7 @@ const Header = () => {
                     alt="Ελληνική"
                   />
                 </span>
-                <ul className="absolute hidden group-hover:block bg-white shadow-xl rounded-xl !px-4 !py-4 hover:block">
+                <ul className="absolute z-30 hidden group-hover:block bg-white shadow-xl rounded-xl !px-4 !py-4 hover:block">
                   <li className="mb-3">
                     <Link href="/el" className="text-black flex gap-2">
                       <img
