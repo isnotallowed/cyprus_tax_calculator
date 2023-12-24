@@ -3,12 +3,22 @@ import { Menubar } from "primereact/menubar";
 import { useMessages, useTranslations, useLocale } from "next-intl";
 import { Link as CustomLink, usePathname } from "@/navigation";
 import Link from "next/link";
-import { useRouter } from "next/router";
+
+const LOCALES = [
+  { label: "English", code: "en", uri: "" },
+  { label: "Ελληνική", code: "el", uri: "/el" },
+  { label: "Русский", code: "ru", uri: "/ru" },
+];
 
 const Header = () => {
   const t = useTranslations();
   const locale = useLocale();
   const pathname = usePathname();
+
+  const getUriByCode = (code: string) => {
+    if (code === "en") return pathname;
+    return `/${code}${pathname}`;
+  };
 
   const LINKS = [
     {
@@ -51,7 +61,7 @@ const Header = () => {
               >
                 Cyprus Tax Calculator
               </CustomLink>
-              <div className="group ml-2">
+              <div className="group ml-2 pr-3 relative">
                 <span>
                   <img
                     src={`/images/flags/${locale}.png`}
@@ -59,30 +69,24 @@ const Header = () => {
                     alt="Ελληνική"
                   />
                 </span>
-                <ul className="absolute z-30 hidden group-hover:block bg-white shadow-xl rounded-xl !px-4 !py-4 hover:block">
-                  <li className="mb-3">
-                    <Link
-                      href={`/el${pathname}`}
-                      className="text-black flex gap-2"
-                    >
-                      <img
-                        src="/images/flags/el.png"
-                        className="w-6"
-                        alt="Ελληνική"
-                      />
-                      Ελληνική
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href={pathname} className="text-black flex gap-2">
-                      <img
-                        src="/images/flags/en.png"
-                        className="w-6"
-                        alt="Ελληνική"
-                      />
-                      English
-                    </Link>
-                  </li>
+                <ul className="absolute z-30 w-max right-0 hidden group-hover:block bg-blue-100 shadow-xl rounded-xl !px-4 !py-4 hover:block">
+                  {LOCALES.map((c) => (
+                    <li key={c.code} className="mb-3 last:mb-0">
+                      <Link
+                        href={getUriByCode(c.code)}
+                        className={`text-black flex gap-2 ${
+                          locale === c.code ? "font-bold" : "font-normal"
+                        }`}
+                      >
+                        <img
+                          src={`/images/flags/${c.code}.png`}
+                          className="w-6"
+                          alt="Ελληνική"
+                        />
+                        {c.label}
+                      </Link>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>
