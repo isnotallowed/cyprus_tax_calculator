@@ -8,15 +8,18 @@ import {
 import EmployeeCalculatorBreakdowns from "@/app/components/EmployeeCalculator/EmployeeCalculatorBreakdowns";
 import EmployeeCalculatorForm from "@/app/components/EmployeeCalculator/EmployeeCalculatorForm";
 import EmployeeCalculatorResult from "@/app/components/EmployeeCalculator/EmployeeCalculatorResult";
-import Link from "next/link";
+import { Link } from "@/navigation";
 import { SALARIES } from "@/helpers/salaries";
 import { formatWithCurrency } from "@/helpers/money";
+import { useTranslations } from "next-intl";
 
 interface CalculatorContentProps {
   initialSalary?: number;
 }
 
 const CalculatorContent = ({ initialSalary }: CalculatorContentProps) => {
+  const t = useTranslations();
+
   const [salary, setSalary] = useState<number | undefined | null>(
     initialSalary,
   );
@@ -54,12 +57,12 @@ const CalculatorContent = ({ initialSalary }: CalculatorContentProps) => {
         />
         <div className="p-4 bg-white md:col-span-7 xl:col-span-9 rounded-2xl w-full flex flex-col md:flex-row justify-between gap-8 lg:gap-20 shadow-xl">
           <EmployeeCalculatorResult
-            title={"Annual"}
+            title={t("common.annual")}
             results={results?.annual}
             className="md:w-1/2"
           />
           <EmployeeCalculatorResult
-            title={"Monthly"}
+            title={t("common.monthly")}
             results={results?.monthly}
             className="md:w-1/2"
           />
@@ -68,7 +71,9 @@ const CalculatorContent = ({ initialSalary }: CalculatorContentProps) => {
       <div className="mt-14 flex flex-col md:grid md:grid-cols-12 gap-6 lg:gap-12">
         <EmployeeCalculatorBreakdowns breakdowns={results?.breakdowns} />
         <div className="p-4 bg-white col-span-12 lg:col-span-3 rounded-2xl w-full shadow-xl">
-          <h3 className="text-lg font-semibold">Popular salaries</h3>
+          <h3 className="text-lg font-semibold">
+            {t("common.popular_salaries")}
+          </h3>
           <div className="flex flex-wrap gap-4 mt-4">
             {SALARIES.map((salary) => (
               <Link

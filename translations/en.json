@@ -1,0 +1,73 @@
+{
+  "metadata": {
+    "main": {
+      "title": "Calculate Your Income Taxes with Ease | Cyprus Tax Calculator",
+      "description": "Discover the most efficient way to calculate your income taxes as an employee with our free tax calculator. Simplify the complex tax process and accurately estimate your tax liabilities. Optimize your finances and make informed financial decisions. Try our Cyprus tax calculator now!",
+      "keywords": "cyprus,tax,calculator,tax calculator for employees,employee,employer,income,rates,salary,Cyprus Tax Calculator,Tax Optimization Tool",
+      "seo_h1": "Simplify Your Tax Calculations with Our Cyprus Employee Tax Calculator",
+      "seo_text": "Unlock the power of seamless tax calculations in Cyprus with our state-of-the-art Employee Tax Calculator. As an employee, understanding and estimating your tax liabilities can be overwhelming, but fret not, for our advanced tool is here to simplify the process.\nTailored to accommodate residents, non-residents, and expatriates, our user-friendly interface ensures effortless navigation through the complexities of Cyprus tax laws. Experience the convenience of instant, precise estimates, allowing you to take charge of your financial planning with confidence.\nOur algorithm, constantly updated to reflect the latest tax regulations, guarantees accurate results, empowering you to make informed financial decisions. Dive into comprehensive tax overviews, including income tax and social security contributions, giving you a clear understanding of your financial obligations.\nGone are the days of laborious manual calculations and tedious spreadsheets. Our tax planning tool equips you with smart strategies, exploring various deductions and credits, and optimizing your tax savings.\nData security is paramount, and we assure you that your financial information is protected by top-notch security measures, ensuring confidentiality at every step.\nWith unbiased results, our calculator remains neutral, devoid of promoting any specific products or services, empowering you to explore financial planning without bias.\nAccessible from any device with an internet connection, you can calculate taxes on the go, granting you the flexibility to manage your finances with ease.\nDon't let the complexities of Cyprus tax calculations hold you back. Embrace financial empowerment today with our Employee Tax Calculator. Say hello to accurate, efficient, and unbiased tax estimations and secure a brighter financial future. Experience the convenience of our Cyprus Tax Calculator - try it now and unlock a world of financial possibilities."
+    },
+    "income-calculator": {
+      "title": "Taxes With {salary} Euro Annual Salary | Cyprus Tax Calculator",
+      "description": "How much should I pay with {salary} annual salary on Cyprus? Use our Cyprus Tax Calculator for estimating your taxes!",
+      "seo_h1": "You Can Calculate Taxes For Your {salary} EUR Annual Salary with Our Cyprus Employee Tax Calculator",
+      "seo_text": "As an employee in Cyprus earning €{salary} annually, understanding and estimating your tax liabilities can be overwhelming. Our state-of-the-art Employee Tax Calculator is here to simplify the process and provide accurate results.\nTailored for residents, non-residents, and expatriates, our user-friendly interface ensures effortless navigation through the complexities of Cyprus tax laws. Our Cyprus Employee Tax Calculator caters to the specific tax needs of different individuals, ensuring a hassle-free tax calculation process.\nWith regular updates to reflect the latest tax regulations, our algorithm guarantees precise estimates, empowering you to make informed financial decisions based on the most current information.\nReplace manual calculations and tedious spreadsheets with our tax planning tool that offers smart strategies to optimize your tax savings effectively. Explore various deductions and credits available on a €{salary} annual salary.\nYour financial information is safe with us. Our top-notch security measures ensure the confidentiality of your data throughout the tax calculation process.\nOur Employee Tax Calculator remains neutral and unbiased, without promoting any specific products or services, allowing you to explore financial planning with an open mind.\nAccessible from any device with an internet connection, you can calculate your taxes on the go, granting you the flexibility to manage your finances with ease and convenience.\nEmpower yourself financially with our Employee Tax Calculator today. Say hello to accurate, efficient, and unbiased tax estimations, securing a brighter financial future. Experience the convenience of our Cyprus Tax Calculator - try it now and unlock a world of financial possibilities."
+    },
+    "vat-calculator": {
+      "title": "Easily Estimate Your Value Added Tax (VAT) | Cyprus Tax Calculator",
+      "description": "Simplify your VAT calculations in Cyprus with our efficient VAT calculator. Get precise estimates for each category, optimize your finances, and make informed decisions. Discover the convenience of our Cyprus Tax Calculator and VAT Calculator now!",
+      "keywords": "cyprus,tax,calculator,vat calculator,rates,Cyprus Tax Calculator,Tax Optimization Tool,calculator for VAT",
+      "seo_h1": "Effortless VAT Calculations with Our Cyprus Tax Calculator",
+      "seo_text": "Empower yourself with seamless VAT calculations in Cyprus using our cutting-edge VAT Calculator. Whether you're a business owner or an individual, dealing with VAT can be complex and time-consuming. But fear not, our advanced tool is here to simplify the process for you.\nDesigned to cater to businesses of all sizes, our user-friendly interface ensures effortless navigation through the intricacies of Cyprus VAT regulations. Say goodbye to confusion and hello to instant, precise estimates that allow you to manage your finances confidently.\nStay up-to-date with the latest VAT laws, as our algorithm is continuously updated to reflect any changes, ensuring you always receive accurate results. This means you can make informed financial decisions without worrying about outdated information.\nOur Cyprus VAT Calculator provides comprehensive overviews, covering various aspects such as standard VAT rates, reduced rates, and exemptions. With this valuable information at your fingertips, you gain a clear understanding of your VAT obligations.\nNo more tedious manual calculations or complicated spreadsheets. Our VAT planning tool equips you with smart strategies, exploring potential deductions and optimizing your VAT savings.\nRest assured, your financial data is safe and secure with us. We employ top-notch security measures to protect your information at every step, ensuring utmost confidentiality.\nOur VAT Calculator remains completely unbiased, devoid of any favoritism towards specific products or services. This empowers you to explore your financial planning options without any external influence.\nAccess the VAT Calculator from any device with an internet connection, giving you the flexibility to manage your finances on the go.\nDon't let VAT complexities hold you back. Embrace financial empowerment today with our Cyprus VAT Calculator. Say hello to accurate, efficient, and unbiased VAT estimations and secure a brighter financial future. Experience the convenience of our VAT Calculator - try it now and unlock a world of financial possibilities.\n"
+    }
+  },
+  "common": {
+    "income_tax_calculator": "Income Tax Calculator",
+    "vat_calculator": "VAT Calculator",
+    "salary": "Salary",
+    "period": "Period",
+    "thirteenth_salary": "13th salary",
+    "annual": "Annual",
+    "monthly": "Monthly",
+    "tax_bracket": "Tax Bracket",
+    "tax_deducted": "Tax Deducted",
+    "start": "Start",
+    "end": "End",
+    "rate": "Rate",
+    "popular_salaries": "Popular Salaries",
+    "price_excluding_vat": "Price excluding VAT:",
+    "vat_rate": "VAT Rate:",
+    "price_including_vat": "Price including VAT:",
+    "category": "Category",
+    "vat": "VAT",
+    "gross": "Gross",
+    "tax": "Tax",
+    "social": "Social",
+    "nhis_gesi": "NHIS (GESI)",
+    "net": "Net"
+  },
+  "vat_categories": {
+    "foodstuff": "Foodstuff",
+    "water_supplies": "Water supplies",
+    "pharmaceutical_products": "Pharmaceutical products",
+    "medical_equipment_for_disabled_persons": "Medical equipment for disabled persons",
+    "children_car_seats": "Children´s car seats",
+    "passenger_transport": "Passenger transport",
+    "books": "Books",
+    "books_on_other_physical_means_of_support": "Books on other physical means of support",
+    "newspapers": "Newspapers",
+    "periodicals": "Periodicals",
+    "admission_to_cultural_services": "Admission to cultural services (theatre, etc)",
+    "admission_to_amusement_parks": "Admission to amusement parks",
+    "pay_tv_cable": "Pay TV / cable",
+    "tv_licenses": "TV licenses",
+    "writers_composers": "Writers / composers",
+    "hotel_accommodation": "Hotel Accommodation",
+    "restaurant_and_catering_services": "Restaurant and catering services",
+    "restaurants": "Restaurants",
+    "medical_and_dental_care": "Medical and dental care",
+    "repair_of_shoes_and_leather_goods": "Repair of shoes and leather goods",
+    "repair_of_clothing_and_household_linen": "Repair of clothing and household linen",
+    "hairdressing": "Hairdressing"
+  }
+}

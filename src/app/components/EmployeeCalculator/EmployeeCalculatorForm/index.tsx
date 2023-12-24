@@ -1,11 +1,7 @@
 import { InputNumber } from "primereact/inputnumber";
 import { RadioButton } from "primereact/radiobutton";
 import { InputSwitch } from "primereact/inputswitch";
-
-const PERIODS = [
-  { title: "Annual", value: "annual" },
-  { title: "Monthly", value: "monthly" },
-];
+import { useTranslations } from "next-intl";
 
 interface EmployeeCalculatorFormProps {
   salary?: number | null;
@@ -25,11 +21,18 @@ const EmployeeCalculatorForm = ({
   hasThirteenSalary,
   className,
 }: EmployeeCalculatorFormProps) => {
+  const t = useTranslations();
+
+  const PERIODS = [
+    { title: t("common.annual"), value: "annual" },
+    { title: t("common.monthly"), value: "monthly" },
+  ];
+
   return (
     <div className={className}>
       <div>
         <label className="flex flex-col gap-2">
-          <span className="text-lg">Salary</span>
+          <span className="text-lg">{t("common.salary")}</span>
           <InputNumber
             id="salary"
             aria-describedby="salary"
@@ -42,7 +45,7 @@ const EmployeeCalculatorForm = ({
         </label>
       </div>
       <div className="mt-4 flex flex-col gap-2">
-        <span className="text-lg">Period</span>
+        <span className="text-lg">{t("common.period")}</span>
         {PERIODS.map((p) => {
           return (
             <div key={p.value} className="flex items-center">
@@ -68,7 +71,7 @@ const EmployeeCalculatorForm = ({
             onChange={(e) => onSetHasThirteenSalary(!!e.value)}
           />
           <label htmlFor="ingredient1" className="ml-2 text-sm">
-            13th salary
+            {t("common.thirteenth_salary")}
           </label>
         </div>
       </div>

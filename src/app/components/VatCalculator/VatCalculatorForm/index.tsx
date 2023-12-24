@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { InputNumber, InputNumberChangeEvent } from "primereact/inputnumber";
 import { Dropdown } from "primereact/dropdown";
+import { useTranslations } from "next-intl";
 
 interface VatCalculatorFormProps {
   className?: string;
@@ -14,6 +15,8 @@ const VAT_RATES = [
 ];
 
 const VatCalculatorForm = ({ className }: VatCalculatorFormProps) => {
+  const t = useTranslations();
+
   const [priceExcludingVat, setPriceExcludingVat] = useState<number | null>(
     null,
   );
@@ -65,7 +68,7 @@ const VatCalculatorForm = ({ className }: VatCalculatorFormProps) => {
   return (
     <div className={`flex flex-col gap-4 ${className}`}>
       <label className="flex flex-col gap-2 w-full">
-        <span className="text-lg">Price excluding VAT:</span>
+        <span className="text-lg">{t("common.price_excluding_vat")}</span>
         <InputNumber
           value={priceExcludingVat}
           onChange={handlePriceExcludingVatChange}
@@ -76,7 +79,7 @@ const VatCalculatorForm = ({ className }: VatCalculatorFormProps) => {
         />
       </label>
       <label className="flex flex-col gap-2 w-max">
-        <span className="text-lg">VAT Rate:</span>
+        <span className="text-lg">{t("common.vat_rate")}</span>
         <Dropdown
           options={VAT_RATES}
           value={selectedVatRate}
@@ -85,7 +88,7 @@ const VatCalculatorForm = ({ className }: VatCalculatorFormProps) => {
         />
       </label>
       <label className="flex flex-col gap-2 w-full">
-        <span className="text-lg">Price including VAT:</span>
+        <span className="text-lg">{t("common.price_including_vat")}</span>
         <InputNumber
           value={priceIncludingVat}
           onChange={handlePriceIncludingVatChange}

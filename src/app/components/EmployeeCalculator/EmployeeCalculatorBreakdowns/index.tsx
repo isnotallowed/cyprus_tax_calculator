@@ -4,6 +4,7 @@ import { Column } from "primereact/column";
 import { DataTable } from "primereact/datatable";
 import { formatWithCurrency, formatWithPercent } from "@/helpers/money";
 import { Breakdown } from "@/services/taxCalculator";
+import { useTranslations } from "next-intl";
 
 interface EmployeeCalculatorBreakdownsProps {
   breakdowns?: Breakdown[];
@@ -11,6 +12,8 @@ interface EmployeeCalculatorBreakdownsProps {
 const EmployeeCalculatorBreakdowns = ({
   breakdowns,
 }: EmployeeCalculatorBreakdownsProps) => {
+  const t = useTranslations();
+
   return (
     <DataTable
       className="bg-white col-span-12 lg:col-span-9 rounded-2xl shadow-xl whitespace-nowrap overflow-hidden"
@@ -19,13 +22,13 @@ const EmployeeCalculatorBreakdowns = ({
       headerColumnGroup={
         <ColumnGroup>
           <Row>
-            <Column header="Tax Bracket" colSpan={3} />
-            <Column header="Tax Deducted" colSpan={1} />
+            <Column header={t("common.tax_bracket")} colSpan={3} />
+            <Column header={t("common.tax_deducted")} colSpan={1} />
           </Row>
           <Row>
-            <Column header="Start" />
-            <Column header="End" />
-            <Column header="Rate" />
+            <Column header={t("common.start")} />
+            <Column header={t("common.end")} />
+            <Column header={t("common.rate")} />
             <Column header="" />
           </Row>
         </ColumnGroup>
@@ -36,22 +39,22 @@ const EmployeeCalculatorBreakdowns = ({
         body={(rowData) => {
           return `${formatWithCurrency(rowData.rate.min)}`;
         }}
-        header="Start"
+        header={t("common.start")}
       />
       <Column
         body={(rowData) => {
           return `${formatWithCurrency(rowData.rate.max)}`;
         }}
-        header="End"
+        header={t("common.end")}
       />
       <Column
         body={(rowData) => {
           return `${formatWithPercent(rowData.rate.pct)}`;
         }}
-        header="Rate"
+        header={t("common.rate")}
       />
       <Column
-        header="Tax Deducted"
+        header={t("common.tax_deducted")}
         body={(rowData) => {
           return `${formatWithCurrency(rowData.taxDeducted)}`;
         }}
