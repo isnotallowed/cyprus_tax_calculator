@@ -10,8 +10,6 @@ export async function generateMetadata({ params }: any) {
     locale: params.locale,
   });
 
-  console.log(t);
-
   return {
     title: t("metadata.vat-calculator.title"),
     description: t("metadata.vat-calculator.description"),
