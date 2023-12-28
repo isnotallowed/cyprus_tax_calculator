@@ -8,6 +8,7 @@ const LOCALES = [
   { label: "English", code: "en", uri: "" },
   { label: "Ελληνική", code: "el", uri: "/el" },
   { label: "Русский", code: "ru", uri: "/ru" },
+  { label: "עִברִית", code: "he", uri: "/he" },
 ];
 
 const Header = () => {
@@ -66,7 +67,7 @@ const Header = () => {
                   <img
                     src={`/images/flags/${locale}.png`}
                     className="w-6"
-                    alt="Ελληνική"
+                    alt={locale}
                   />
                 </span>
                 <ul className="absolute z-30 w-max right-0 hidden group-hover:block bg-blue-100 shadow-xl rounded-xl !px-4 !py-4 hover:block">
@@ -81,7 +82,7 @@ const Header = () => {
                         <img
                           src={`/images/flags/${c.code}.png`}
                           className="w-6"
-                          alt="Ελληνική"
+                          alt={c.code}
                         />
                         {c.label}
                       </Link>
