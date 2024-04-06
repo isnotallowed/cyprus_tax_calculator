@@ -7,7 +7,7 @@ const Footer = () => {
         <Link href="/" className="text-3xl text-white">
           Cyprus Tax Calculator
         </Link>
-        <span className="text-sm text-white">© 2023 All Rights Reserved</span>
+        <span className="text-sm text-white">© 2024 All Rights Reserved</span>
       </div>
     </footer>
   );
