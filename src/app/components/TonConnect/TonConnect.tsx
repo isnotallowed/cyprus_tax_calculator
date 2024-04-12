@@ -31,7 +31,11 @@ export const TonConnect = () => {
     };
 
     const universalLink = connector.connect(walletConnectionSource);
-    window.open(universalLink);
+    window?.ReactNativeWebView?.postMessage({
+      event: "universalLink",
+      data: universalLink,
+    });
+    // window.open(universalLink);
   };
   return (
     <div>
