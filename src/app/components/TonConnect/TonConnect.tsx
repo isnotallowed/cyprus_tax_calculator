@@ -31,7 +31,7 @@ export const TonConnect = () => {
     };
 
     const universalLink = connector.connect(walletConnectionSource);
-    window.open(universalLink);
+    return universalLink;
   };
   return (
     <div>
