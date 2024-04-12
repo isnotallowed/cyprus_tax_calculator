@@ -17,7 +17,6 @@ export const TonConnect = () => {
         console.log("kek2");
       }, console.error);
     }
-    connector.listen();
   }, []);
   useEffect(() => {
     return () => {
