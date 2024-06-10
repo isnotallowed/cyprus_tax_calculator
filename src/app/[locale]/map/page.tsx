@@ -27,7 +27,7 @@ const LocationMarker = () => {
         (position) => {
           const { latitude, longitude } = position.coords;
           const pos = [latitude, longitude];
-          setPosition(pos);
+          setPosition(pos as any);
           map.setView(pos, map.getZoom());
         },
         (e) => {
