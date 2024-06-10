@@ -53,12 +53,14 @@ const MapComponent = () => {
 
   return (
     <MapContainer
+      // @ts-ignore
       center={initialPosition}
       zoom={13}
       style={{ height: "100vh", width: "100%" }}
     >
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        // @ts-ignore
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       />
       <LocationMarker />
